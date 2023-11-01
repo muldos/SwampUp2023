@@ -56,7 +56,10 @@ In this scenario, you won't have to generate the access token, as it will use yo
 jf c use swampup
 ```
 ## Then create the federated repositories using the `jf rt curl` command 
-
+ 
+ 1. Replace {SwampUp JPD host} with valid value
+ 2. Replace {SwampUp JPD Edge host} with valid value
+ 3. Replace {SwampUp Second JPD host} with valid value
 ```
 jf rt curl -XPUT /api/repositories/jftd105lab3-maven-dev-local -H "Content-Type: application/json" --data '{ "key": "jftd105lab3-maven-dev-local", "rclass": "federated", "packageType": "maven", "members": [ { "url": "https://{SwampUp JPD host}.jfrog.io//artifactory/jftd105lab3-maven-dev-local", "enabled": true }, { "url": "https://{SwampUp Edge host}/artifactory/jftd105lab3-maven-dev-local", "enabled": true }, { "url": "https://{SwampUp Second JPD host}.jfrog.io/artifactory/jftd105lab3-maven-dev-local", "enabled": true } ] }'
 ```
