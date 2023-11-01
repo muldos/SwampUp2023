@@ -1,9 +1,9 @@
 ### Prerequisites
-# LAB 0 - Configure JFrog CLI
+## LAB 0 - Configure JFrog CLI
 
 Here we will create the federated repositories setup, using the JFrog CLI and the platform's REST API.
 
-#Method 1 : Use the JFrog CLI to generate an access token, and then call the API using cURL.
+# Method 1 : Use the JFrog CLI to generate an access token, and then call the API using cURL.
 
 ## Use CLI to generate an access_token
 Create an access token for the user with the swampup@jfrog.com username.
@@ -23,7 +23,7 @@ jf rt atc swampup@jfrog.com
  3. Replace {SwampUp Second JPD host} with valid value
  4. Replace <TOKEN> with the access-token generated from the previous step
  5. Copy and execute the below command in the terminal
-
+```
 curl --location --request PUT 'https://{SwampUp JPD host}.jfrog.io/artifactory/api/repositories/jftd105lab3-maven-dev-local' \
 -H "Content-Type: application/json" \
 --header 'Authorization: Bearer <TOKEN>' \
@@ -46,7 +46,7 @@ curl --location --request PUT 'https://{SwampUp JPD host}.jfrog.io/artifactory/a
 }
 ]
 }'
-
+```
 # Method 2 : Use the Jfrog CLI's cURL wrapper
 In this scenario, you won't have to generate the access token, as it will use your existing configuration.
 
