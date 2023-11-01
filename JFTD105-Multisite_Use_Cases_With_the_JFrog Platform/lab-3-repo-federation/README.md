@@ -61,7 +61,7 @@ jf c use swampup
 jf rt curl -XPUT /api/repositories/jftd105lab3-maven-dev-local -H "Content-Type: application/json" --data '{ "key": "jftd105lab3-maven-dev-local", "rclass": "federated", "packageType": "maven", "members": [ { "url": "https://{SwampUp JPD host}.jfrog.io//artifactory/jftd105lab3-maven-dev-local", "enabled": true }, { "url": "https://{SwampUp Edge host}/artifactory/jftd105lab3-maven-dev-local", "enabled": true }, { "url": "https://{SwampUp Second JPD host}.jfrog.io/artifactory/jftd105lab3-maven-dev-local", "enabled": true } ] }'
 ```
 
-## RUN the Helper SCRIPT [Optional]
+# RUN the Helper SCRIPT [Optional]
 - Run 
 ```
 sh lab_3_federation_rescue.sh
